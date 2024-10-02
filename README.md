@@ -4,14 +4,14 @@
 Мета: Створити адміністративну панель на базі React Admin, використовуючи мокові дані. Панель повинна підтримувати CRUD операції (створення, перегляд, редагування та видалення даних) для кількох ресурсів.
 
 Запуск проєкту
-   Client:
-    npm install
-    npm run dev
+Client:
+npm install
+npm run dev
 
-   Server:
-    npm install
-    npm run dev
-    перейменувати .env.example у .env, та налаштувати бд
+Server:
+npm install
+npm run dev
+перейменувати .env.example у .env, та налаштувати бд
 
 Список виконани задач
 1. Налаштування бекенду та підключення бд
@@ -28,11 +28,12 @@
 <img width="1110" alt="Screenshot 2024-10-03 at 02 25 27" src="https://github.com/user-attachments/assets/b39df53e-ae6b-437a-a1f2-2ddb79e577e6">
 
 4. Реалізація взаємодії між ресурсами
-   В clients ресурсі реалізуйте показ всіх замовлень orders конкретного клієнта.
+
+В clients ресурсі реалізуйте показ всіх замовлень orders конкретного клієнта.
 
    <img width="620" alt="Screenshot 2024-10-03 at 02 27 14" src="https://github.com/user-attachments/assets/dda49c22-75c8-429e-9def-61cf5007b39f">
 
-   В products ресурсі реалізуйте відображення масиву торгових точок shops, в яких конкретний продукт є в наявності.
+В products ресурсі реалізуйте відображення масиву торгових точок shops, в яких конкретний продукт є в наявності.
 
    <img width="196" alt="Screenshot 2024-10-03 at 02 27 27" src="https://github.com/user-attachments/assets/564ce33a-c003-41f9-9f9c-84a393ebd8e3">
 
