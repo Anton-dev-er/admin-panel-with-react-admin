@@ -6,17 +6,20 @@
 Запуск проєкту
 Client:
 
-npm install
+-npm install
 
-npm run dev
+-npm run dev
 
 Server:
 
-npm install
+-npm install
 
-npm run dev
+-npm run dev
 
-перейменувати .env.example у .env, та налаштувати бд
+-перейменувати .env.example у .env, та налаштувати бд
+
+
+
 
 Список виконани задач
 1. Налаштування бекенду та підключення бд
