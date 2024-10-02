@@ -30,7 +30,7 @@
 4. Реалізація взаємодії між ресурсами
    В clients ресурсі реалізуйте показ всіх замовлень orders конкретного клієнта.
 
-   <img width="4" alt="Screenshot 2024-10-03 at 02 27 25" src="https://github.com/user-attachments/assets/a18821bd-cf75-43f6-90ba-1f030bba8b3b">
+   <img width="620" alt="Screenshot 2024-10-03 at 02 27 14" src="https://github.com/user-attachments/assets/dda49c22-75c8-429e-9def-61cf5007b39f">
 
    В products ресурсі реалізуйте відображення масиву торгових точок shops, в яких конкретний продукт є в наявності.
 
