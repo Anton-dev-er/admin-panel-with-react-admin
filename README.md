@@ -5,12 +5,17 @@
 
 Запуск проєкту
 Client:
+
 npm install
+
 npm run dev
 
 Server:
+
 npm install
+
 npm run dev
+
 перейменувати .env.example у .env, та налаштувати бд
 
 Список виконани задач
