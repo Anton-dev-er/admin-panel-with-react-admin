@@ -16,7 +16,7 @@ const allowedOrigin = [CLIENT_URL_LOCAL];
 const app = express();
 // @ts-ignore
 const server = http.createServer(app);
-const PORT = process.env.PORT || 5555;
+const PORT = process.env.NODE_DOCKER_PORT || 5555;
 
 app.use(express.json());
 app.use(cookieParser());

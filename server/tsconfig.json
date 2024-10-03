@@ -9,6 +9,15 @@
       "experimentalDecorators": true,
       "esModuleInterop": true,
       "sourceMap": true,
-      "allowSyntheticDefaultImports": true
-   }
+      "allowSyntheticDefaultImports": true,
+      "skipLibCheck": true,
+      "types": []
+   },
+   "include": ["./src/**/*", "index.ts"],
+   "exclude": [
+      "node_modules",
+      "./node_modules",
+      "./node_modules/*",
+      "./node_modules/@types/node/index.d.ts",
+   ]
 }
