@@ -10,8 +10,8 @@ export class ProductEntity {
     @Column()
     name: string
 
-    @Column()
-    price: string
+    @Column({type: "float"})
+    price: number
 
     @Column('simple-array', { array: true })
     shops: string[];

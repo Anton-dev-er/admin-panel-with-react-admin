@@ -1,12 +1,16 @@
 import {
-  Datagrid,
   ArrayField,
+  ChipField,
+  Datagrid,
+  DeleteButton,
+  EditButton,
+  FunctionField,
   List,
   NumberField,
   ReferenceField,
-  TextField,
+  ShowButton,
   SingleFieldList,
-  ChipField, FunctionField, ShowButton, EditButton, DeleteButton
+  TextField
 } from "react-admin";
 
 const ProductList = () => {

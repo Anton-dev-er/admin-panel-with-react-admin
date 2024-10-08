@@ -61,7 +61,7 @@ class ProductService {
         .createQueryBuilder("product")
         .leftJoinAndSelect("product.category", "category")
         .select("category.name", "category")
-        .addSelect("SUM(CAST(product.price AS INTEGER))", "totalPrice") // Перетворення типу
+        .addSelect("SUM(product.price)", "totalPrice")
         .groupBy("category.id")
         .getRawMany();
 
