@@ -1,4 +1,5 @@
 import { ClientEntity } from "../entities/client.entity";
+import ApiError from "../errors/api.error";
 import clientService from "../services/client.service";
 
 class ClientController {
@@ -16,7 +17,7 @@ class ClientController {
 
       return res.json(clients);
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "client"));
     }
     return;
   }
@@ -27,7 +28,7 @@ class ClientController {
 
       return res.json(await clientService.getById(id));
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "client"));
     }
     return;
   }
@@ -38,7 +39,7 @@ class ClientController {
 
       return res.json({ id: client.id, data: client });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "client"));
     }
     return;
   }
@@ -49,7 +50,7 @@ class ClientController {
 
       return res.json({ id: client.id, data: client });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "client"));
     }
     return;
   }
@@ -61,7 +62,7 @@ class ClientController {
 
       return res.json({ id });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "client"));
     }
     return;
   }

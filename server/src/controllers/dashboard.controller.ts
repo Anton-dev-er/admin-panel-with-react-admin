@@ -1,3 +1,4 @@
+import ApiError from "../errors/api.error";
 import orderService from "../services/order.service";
 import productService from "../services/product.service";
 
@@ -6,7 +7,7 @@ class DashboardController {
     try {
       return res.json(await orderService.getOrderByDate());
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e));
     }
     return;
   }
@@ -15,7 +16,7 @@ class DashboardController {
     try {
       return res.json(await productService.getProductsPriceByCategory());
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e));
     }
     return;
   }
@@ -26,7 +27,7 @@ class DashboardController {
 
       return res.json(re);
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e));
     }
     return;
   }

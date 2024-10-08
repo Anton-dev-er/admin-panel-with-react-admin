@@ -1,4 +1,5 @@
 import OrderDto from "../dtos/order.dto";
+import ApiError from "../errors/api.error";
 import orderService from "../services/order.service";
 
 class OrderController {
@@ -12,7 +13,7 @@ class OrderController {
 
       return res.json(orders.map((order) => new OrderDto(order)));
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "order"));
     }
     return;
   }
@@ -24,7 +25,7 @@ class OrderController {
 
       return res.json(new OrderDto(order));
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "order"));
     }
     return;
   }
@@ -36,7 +37,7 @@ class OrderController {
 
       return res.json({ id: product.id, data: product });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "order"));
     }
     return;
   }
@@ -48,7 +49,7 @@ class OrderController {
 
       return res.json({ id: product.id, data: product });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "order"));
     }
     return;
   }
@@ -60,7 +61,7 @@ class OrderController {
 
       return res.json({ id });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "order"));
     }
     return;
   }

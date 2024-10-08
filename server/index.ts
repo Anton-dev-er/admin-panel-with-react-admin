@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import express from "express";
 import http from "http";
 import { AppDataSource } from "./src/data-source";
+import errorHandler from "./src/middlewares/error-handling.middleware";
 import router from "./src/routes/index";
 
 dotenv.config();
@@ -20,9 +21,11 @@ const PORT = NODE_LOCAL_PORT || 5555;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({credentials: true, origin: allowedOrigin}));
+app.use(cors({ credentials: true, origin: allowedOrigin }));
 app.use("/", router);
 
+// @ts-ignore
+app.use(errorHandler);
 
 const letsGo = async () => {
   try {

@@ -1,5 +1,6 @@
-import categoryService from "../services/category.service";
 import { CategoryEntity } from "../entities/category.entity";
+import ApiError from "../errors/api.error";
+import categoryService from "../services/category.service";
 
 class CategoryController {
   async getMany(req, res, next) {
@@ -16,7 +17,7 @@ class CategoryController {
       res.set("X-Total-Count", categories.length);
       return res.json(categories);
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "category"));
     }
     return;
   }
@@ -27,7 +28,7 @@ class CategoryController {
 
       return res.json(await categoryService.getById(id));
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "category"));
     }
     return;
   }
@@ -38,7 +39,7 @@ class CategoryController {
 
       return res.json({ id: category.id, data: category });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "category"));
     }
     return;
   }
@@ -49,7 +50,7 @@ class CategoryController {
 
       return res.json({ id: category.id, data: category });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "category"));
     }
     return;
   }
@@ -61,7 +62,7 @@ class CategoryController {
 
       return res.json({ id });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "category"));
     }
     return;
   }

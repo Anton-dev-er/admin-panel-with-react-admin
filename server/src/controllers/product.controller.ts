@@ -1,5 +1,6 @@
 import ProductDto from "../dtos/product.dto";
 import { ProductEntity } from "../entities/product.entity";
+import ApiError from "../errors/api.error";
 import productService from "../services/product.service";
 
 class ProductController {
@@ -18,7 +19,7 @@ class ProductController {
 
       return res.json(products.map((product) => new ProductDto(product)));
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "product"));
     }
     return;
   }
@@ -30,7 +31,7 @@ class ProductController {
 
       return res.json(new ProductDto(product));
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "product"));
     }
     return;
   }
@@ -42,7 +43,7 @@ class ProductController {
 
       return res.json({ id: product.id, data: product });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "product"));
     }
     return;
   }
@@ -54,7 +55,7 @@ class ProductController {
 
       return res.json({ id: product.id, data: product });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "product"));
     }
     return;
   }
@@ -66,7 +67,7 @@ class ProductController {
 
       return res.json({ id });
     } catch (e) {
-      next(e);
+      next(ApiError.internal(e, "product"));
     }
     return;
   }
