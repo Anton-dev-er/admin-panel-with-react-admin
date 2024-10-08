@@ -13,7 +13,7 @@ const CategoryList = () => {
           </ReferenceManyField>
           <ShowButton/>
           <EditButton/>
-          <DeleteButton/>
+          <DeleteButton mutationMode="optimistic"/>
         </Datagrid>
       </List>
   );

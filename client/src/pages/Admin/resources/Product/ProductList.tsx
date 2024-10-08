@@ -30,7 +30,7 @@ const ProductList = () => {
           <ReferenceField source="category_id" reference="categories" label="Category Id" link="show"/>
           <ShowButton/>
           <EditButton/>
-          <DeleteButton/>
+          <DeleteButton mutationMode="optimistic"/>
         </Datagrid>
       </List>
   );

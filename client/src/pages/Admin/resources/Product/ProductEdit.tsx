@@ -3,7 +3,7 @@ import { validateName, validatePrice } from "./validation.ts";
 
 const ProductEdit = () => {
   return (
-      <Edit>
+      <Edit mutationMode="optimistic" redirect="list">
         <SimpleForm>
           <TextInput source="name" name="name" validate={validateName}/>
           <NumberInput source="price" name="price" validate={validatePrice}/>

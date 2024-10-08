@@ -3,7 +3,7 @@ import { validateEmail, validateName } from "./validation.ts";
 
 const ClientEdit = () => {
   return (
-      <Edit>
+      <Edit mutationMode="optimistic" redirect="list">
         <SimpleForm>
           <TextInput source="name" name="name" validate={validateName}/>
           <TextInput source="email" name="email" validate={validateEmail}/>

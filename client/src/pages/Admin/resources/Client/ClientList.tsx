@@ -9,7 +9,7 @@ const ClientList = () => {
           <EmailField source="email"/>
           <ShowButton/>
           <EditButton/>
-          <DeleteButton/>
+          <DeleteButton mutationMode="optimistic"/>
         </Datagrid>
       </List>
   );

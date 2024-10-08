@@ -5,13 +5,23 @@ import {
   ReferenceInput,
   SimpleForm,
   SimpleFormIterator,
-  TextInput
+  TextInput,
+  useNotify,
+  useRedirect
 } from "react-admin";
 import { validateName, validatePrice } from "./validation.ts";
 
 const ProductCreate = () => {
+  const notify = useNotify();
+  const redirect = useRedirect();
+
+  const onSuccess = () => {
+    notify("Product created");
+    redirect("/products");
+  };
+
   return (
-      <Create>
+      <Create mutationOptions={{ onSuccess }}>
         <SimpleForm>
           <TextInput source="name" name="name" validate={validateName}/>
           <NumberInput source="price" name="price" validate={validatePrice}/>

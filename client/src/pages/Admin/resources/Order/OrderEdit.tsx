@@ -3,7 +3,7 @@ import { validateDate, validateQuantity } from "./validation.ts";
 
 const OrderEdit = () => {
   return (
-      <Edit>
+      <Edit mutationMode="optimistic" redirect="list">
         <SimpleForm>
           <NumberInput source="quantity" name="quantity" validate={validateQuantity}/>
           <DateInput source="date" name="date" validate={validateDate}/>

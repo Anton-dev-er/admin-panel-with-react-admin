@@ -21,7 +21,7 @@ const OrderList = () => {
           <ReferenceField source="client_id" reference="clients" label="Client Id" link="show"/>
           <ShowButton/>
           <EditButton/>
-          <DeleteButton/>
+          <DeleteButton mutationMode="optimistic"/>
         </Datagrid>
       </List>
   );
