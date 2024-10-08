@@ -20,13 +20,13 @@ services:
     restart: unless-stopped
     env_file: ./.env
     ports:
-      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+      - $NODE_LOCAL_PORT:$NODE_LOCAL_PORT
     environment:
       - DB_HOST=postgresdb
-      - DB_USER=$POSTGRESDB_USER
-      - DB_PASSWORD=$POSTGRESDB_ROOT_PASSWORD
-      - DB_NAME=$POSTGRESDB_DATABASE
       - DB_PORT=$POSTGRESDB_DOCKER_PORT
+      - DB_USERNAME=$POSTGRESDB_USER
+      - DB_PASSWORD=$POSTGRESDB_ROOT_PASSWORD
+      - DB_DATABASE=$POSTGRESDB_DATABASE
     stdin_open: true
     tty: true
   client:
