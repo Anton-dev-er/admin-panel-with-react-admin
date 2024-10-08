@@ -1,11 +1,12 @@
 import { ArrayInput, Edit, NumberInput, ReferenceInput, SimpleForm, SimpleFormIterator, TextInput } from "react-admin";
+import { validateName, validatePrice } from "./validation.ts";
 
 const ProductEdit = () => {
   return (
       <Edit>
         <SimpleForm>
-          <TextInput source="name" name="name"/>
-          <NumberInput source="price" name="price"/>
+          <TextInput source="name" name="name" validate={validateName}/>
+          <NumberInput source="price" name="price" validate={validatePrice}/>
           <ReferenceInput
               source="category_id"
               reference="categories"
