@@ -17,7 +17,7 @@
 &ensp;&ensp;&ensp;&ensp;-npm run dev <br />
 
 ### *** Запуск проєкту через docker compose: ***<br />
-&ensp;&ensp;&ensp;&ensp;-перейменувати /privat-24-test-task/.env.example у .env, та налаштувати бд <br />
+&ensp;&ensp;&ensp;&ensp;-перейменувати /.env.example у .env, та налаштувати бд <br />
 &ensp;&ensp;&ensp;&ensp;-docker compose up<br />
 &ensp;&ensp;&ensp;&ensp;-перейти на localhost:8080 <br />
 
